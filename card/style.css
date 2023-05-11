@@ -1,0 +1,23 @@
+* { margin:0px ; padding:0px }
+table img{
+	width: 100px;
+	height:  auto;
+}
+
+.container-fluid{
+	background-color: black;
+	padding: 10px 0;
+	color: white;
+	font-size:  20px;
+}
+p{
+	text-align: center;
+	margin: 20px 0;
+}
+img{
+	margin: 0 30px;
+}
+.btnMy
+{
+	    margin: 17px 0
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>add to card</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="logo_1.png">
+    </div>
+    <div class="col-sm-2"><p>HOW IT WORK</p></div>
+    <div class="col-sm-2"><p>CONTACT</p></div>
+    <div class="col-sm-5"></div>
+    <div class="col-sm-1">
+      <button class="btn btn-outline-light btnMy"> LOGIN</button>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<div class="container">
+
+	<table class="table">
+  		<thead>
+  			<tr>
+				<th scope="col">Select</th>
+	      		<th scope="col">image</th>
+	      		<th scope="col">Description</th>
+	      		<th scope="col">Price</th>
+	      		<th scope="col">Quantity</th>
+	      		<th scope="col">item Total</th>
+	      		<th scope="col">Romeve</th>
+			</tr>
+  		</thead>
+  		
+  		<tbody>
+    		<tr id="itemOne">
+				<td> <input type="checkbox" class="form-check-input" onclick ="Click('itemOne')" name="" id="itemOneCheck" > </td>
+				<td> <img src="shopping.webp" title="add" id="itemOneImg" > </td>
+				<td> <span>iphone 12</span> </td>
+				<td> <span>$</span> <span>40</span> </td>
+				<td> <input type="number" min="0" class="form-control" disabled  name="" id="itemOneNum"  oninput="addRs('itemOne')" > </td>
+				<td> <span>$</span> <span id="itemOneRs">0</span> </td>
+				<td> <button class="btn btn-outline-danger" id="itemOneRemove" onclick ="Remove('itemOne')"> Remove</button> </td>
+			</tr>
+
+			<tr id="itemTwo">
+				<td> <input type="checkbox" class="form-check-input" onclick="Click('itemTwo')" name="" id="itemTwoCheck" > </td>
+				<td> <img src="shopping-5.webp" title="add" id="itemTwoImg" > </td>
+				<td> <span>Iphone 12 max</span> </td>
+				<td> <span>$</span> <span>45</span> </td>
+				<td> <input type="number" min="0" class="form-control" disabled  name="" id="itemTwoNum"  oninput="addRs('itemTwo')" > </td>
+				<td> <span>$</span> <span id="itemTwoRs">0</span> </td>
+				<td> <button class="btn btn-outline-danger" id="itemTwoRemove" onclick ="Remove('itemTwo')"> Remove</button> </td>
+			</tr>
+
+			<tr id="itemTree">
+				<td> <input type="checkbox" class="form-check-input" onclick="Click('itemTree')" name="" id="itemTreeCheck" > </td>
+				<td> <img src="shopping-3.webp" title="add" id="itemTreeImg" > </td>
+				<td> <span>iphTree 13</span> </td>
+				<td> <span>$</span> <span>90</span> </td>
+				<td> <input type="number" min="0" class="form-control" disabled  name="" id="itemTreeNum"  oninput="addRs('itemTree')" > </td>
+				<td> <span>$</span> <span id="itemTreeRs">0</span> </td>
+				<td> <button class="btn btn-outline-danger" id="itemTreeRemove" onclick ="Remove('itemTree')"> Remove</button> </td>
+			</tr>
+
+			<tr id="itemFour">
+				<td> <input type="checkbox" class="form-check-input" onclick="Click('itemFour')" name="" id="itemFourCheck" > </td>
+				<td> <img src="shopping-4.webp" title="add" id="itemFourImg" > </td>
+				<td> <span>Iphone 13 max</span> </td>
+				<td> <span>$</span> <span>67.08</span> </td>
+				<td> <input type="number" min="0" class="form-control" disabled  name="" id="itemFourNum"  oninput="addRs('itemFour')" > </td>
+				<td> <span>$</span> <span id="itemFourRs">0</span> </td>
+				<td> <button class="btn btn-outline-danger" id="itemFourRemove" onclick ="Remove('itemFour')"> Remove</button> </td>
+			</tr> 	
+
+ 		</tbody>
+	</table>
+	<div class="row">
+		<div class="col-sm-8"></div>
+		<div class="col-sm-4 col-12">
+			
+				<table class="table">
+					<tr>
+						<td> <span class="">Totol Items : </span> </td>
+						<td> <span class="" id="totalItems"></span></td>
+					</tr>
+					<tr>
+						<td> <span class="">Sub Total : </span> </td>
+						<td> <span class="" id="subTotal"> </span>  </td>
+					</tr>
+					<tr>
+						<td> <span class="">GST(18%) : </span> </td>
+						<td> <span class="" id="GST"> </span>  </td>
+					</tr>
+					
+					<tr>
+						<td> <span class="">Total : </span> </td>
+						<td> <span class="" id="fullTotal">  </span> </td>
+					</tr>
+				</table>
+			<button class="btn btn-primary form-control" onclick="Checkbox()"> Checkout</button>
+		</div>
+	</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script type="text/javascript" src="script.js"></script>
+
+
+
+</body>
+</html>
